@@ -1,0 +1,22 @@
+{
+  "default-internal-server-error-message": {
+    "description": "default internal server error message",
+    "one": "Unexpected error. Please try again later.",
+    "other": "Unexpected error. Please try again later."
+  },
+  "default-unauthorized-error-message": {
+    "description": "default unauthorized error message",
+    "one": "An unknown error has occurred.",
+    "other": "An unknown error has occurred."
+  },
+  "could-not-create-reservation": {
+    "description": "could not create reservation",
+    "one": "Could not create reservation",
+    "other": "Could not create reservation"
+  },
+  "could-not-change-reservation-check-in-date": {
+    "description": "could not change reservation check in date",
+    "one": "You entered a past date",
+    "other": "You entered a past date"
+  }
+}

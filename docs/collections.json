@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "2bf871a9-50ee-499c-a8ad-5944884f523c",
+		"name": "HotelCalifornia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2286088"
+	},
+	"item": [
+		{
+			"name": "Signın",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"erhan@gmail.com\",\n    \"password\":\"123123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8001/v1/account/sign-in",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"v1",
+						"account",
+						"sign-in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NewReservation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "tr",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzExMTEwNTMxfQ.z7O21hp91OGmVhpwUffJ2gkUs6niijJChjDFaYDPGwo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"destination\": \"Istanbul\",\n    \"checkInDate\": \"2024-03-25\",\n    \"checkOutDate\": \"2024-03-30\",\n    \"accommodation\": \"mountain\",\n    \"guestCount\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8001/v1/reservation/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"v1",
+						"reservation",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateReservation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "en",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzExMTEwNTMxfQ.z7O21hp91OGmVhpwUffJ2gkUs6niijJChjDFaYDPGwo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"pnr\":\"pE5TYsDj\",\n    \"destination\": \"zonguldak\",\n    \"checkInDate\": \"2024-03-20\",\n    \"checkOutDate\": \"2024-03-30\",\n    \"accommodation\": \"mountain\",\n    \"guestCount\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8001/v1/reservation/update",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"v1",
+						"reservation",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindReservation",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "tr",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzExMTEwNTMxfQ.z7O21hp91OGmVhpwUffJ2gkUs6niijJChjDFaYDPGwo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"pnr\":\"2G90DqRo\",\n    \"destination\": \"sivas\",\n    \"checkInDate\": \"2024-03-24\",\n    \"checkOutDate\": \"2024-03-30\",\n    \"accommodation\": \"mountain\",\n    \"guestCount\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8001/v1/reservation?pnr=pE5TYsDj",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"v1",
+						"reservation"
+					],
+					"query": [
+						{
+							"key": "pnr",
+							"value": "pE5TYsDj"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindReservations",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "tr",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzExMTEwNTMxfQ.z7O21hp91OGmVhpwUffJ2gkUs6niijJChjDFaYDPGwo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"pnr\":\"2G90DqRo\",\n    \"destination\": \"sivas\",\n    \"checkInDate\": \"2024-03-24\",\n    \"checkOutDate\": \"2024-03-30\",\n    \"accommodation\": \"mountain\",\n    \"guestCount\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8001/v1/reservations",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"v1",
+						"reservations"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

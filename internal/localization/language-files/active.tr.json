@@ -1,0 +1,22 @@
+{
+  "default-internal-server-error-message": {
+    "description": "default-internal-server-error-message",
+    "one": "Geçici bir hata oluştu. Lütfen daha sonra tekrar deneyin.",
+    "other": "Geçici bir hata oluştu. Lütfen daha sonra tekrar deneyin."
+  },
+  "default-unauthorized-error-message": {
+    "description": "default unauthorized error message",
+    "one": "Bilinmeyen bir hata oluştu.",
+    "other": "Bilinmeyen bir hata oluştu."
+  },
+  "could-not-create-reservation": {
+    "description": "could not create reservation",
+    "one": "Rezervasyon oluşturulamadı",
+    "other": "Rezervasyon oluşturulamadı"
+  },
+  "could-not-change-reservation-check-in-date": {
+    "description": "could not change reservation check in date",
+    "one": "Geçmiş bir tarih girdiniz",
+    "other": "Geçmiş bir tarih girdiniz"
+  }
+}
