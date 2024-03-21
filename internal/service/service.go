@@ -136,6 +136,11 @@ func (s *Service) CreateReservation(ctx context.Context, req hotelcalifornia.Cre
 		return res
 	}
 
+	if checkInDate.After(checkOutDate) {
+		res.Result = apierror.CouldNotCheckInGreaterThanCheckout
+		return res
+	}
+
 	pnr := s.generatePNR(pnrLen)
 
 	rev := mysqlstore.Reservation{
@@ -196,6 +201,11 @@ func (s *Service) UpdateReservation(ctx context.Context, req hotelcalifornia.Upd
 
 	if time.Now().After(checkInDate) {
 		res.Result = apierror.CouldNotChangeReservationCheckInDate
+		return res
+	}
+
+	if checkInDate.After(checkOutDate) {
+		res.Result = apierror.CouldNotCheckInGreaterThanCheckout
 		return res
 	}
 

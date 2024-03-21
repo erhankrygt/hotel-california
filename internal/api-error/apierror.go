@@ -14,6 +14,7 @@ const (
 	CodeUnauthorizedError
 	CodeCouldNotCreateReservationError
 	CodeCouldNotChangeReservationCheckInDateError
+	CodeCouldNotCheckInGreaterThanCheckoutError
 )
 
 // error names
@@ -24,6 +25,7 @@ const (
 	NameUnauthorizedError                         = "UnauthorizedError"
 	NameCouldNotCreateReservationError            = "CouldNotCreateReservationError"
 	NameCouldNotChangeReservationCheckInDateError = "CouldNotChangeReservationCheckInDateError"
+	NameCouldNotCheckInGreaterThanCheckoutError   = "CouldNotCheckInGreaterThanCheckoutError"
 )
 
 // compile-time proof of error interface implementation
@@ -71,6 +73,13 @@ var CouldNotChangeReservationCheckInDate = &APIError{
 	Code:                CodeCouldNotChangeReservationCheckInDateError,
 	StatusCode:          http.StatusBadRequest,
 	MessageLocalizerKey: localization.CouldNotChangeReservationCheckInDate,
+}
+
+var CouldNotCheckInGreaterThanCheckout = &APIError{
+	Name:                NameCouldNotCheckInGreaterThanCheckoutError,
+	Code:                CodeCouldNotCheckInGreaterThanCheckoutError,
+	StatusCode:          http.StatusBadRequest,
+	MessageLocalizerKey: localization.CouldNotCheckInGreaterThanCheckoutError,
 }
 
 // NewBadRequestError returns bad request error

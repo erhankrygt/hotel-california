@@ -18,5 +18,10 @@
     "description": "could not change reservation check in date",
     "one": "You entered a past date",
     "other": "You entered a past date"
+  },
+  "could-not-check-in-greater-than-check-out": {
+    "description": "check-in date cannot be greater than check-out date",
+    "one": "Check-in date cannot be greater than check-out date",
+    "other": "Check-in date cannot be greater than check-out date"
   }
 }

@@ -18,5 +18,10 @@
     "description": "could not change reservation check in date",
     "one": "Geçmiş bir tarih girdiniz",
     "other": "Geçmiş bir tarih girdiniz"
+  },
+  "could-not-check-in-greater-than-check-out": {
+    "description": "check-in date cannot be greater than check-out date",
+    "one": "Giriş tarihi çıkış tarihinden büyük olamaz",
+    "other": "Giriş tarihi çıkış tarihinden büyük olamaz"
   }
 }
